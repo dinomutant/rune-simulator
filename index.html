@@ -22,7 +22,7 @@ input, select { margin: 5px; }
 
 星座 体力 <input id="star_hp" type="number" value="0"><br>
 星座 攻撃 <input id="star_atk" type="number" value="0"><br>
-星座 速度[%] <input id="star_spd" type="number" value="0"><br>
+星座 速度 <input id="star_spd" type="number" value="0"><br>
 星座 クリダメ[%] <input id="star_cd" type="number" value="0"><br>
 星座 クリ率[%] <input id="star_cr" type="number" value="0"><br>
 ネストスキン[%](攻撃) <input id="egg_atk" type="number" value="0"><br>
@@ -1433,7 +1433,7 @@ let spd = Number(document.getElementById("spd").value)||0;
   let HP = (hp + v(total,"体力") + star_hp) * (1 + v(total,"体力(%)") + nest_hp);
   let ATK = (atk + v(total,"攻撃") + star_atk) * (1 + v(total,"攻撃(%)") + egg_atk);
   let effectExp = ATK * effectTotal;
-  let SPD = spd * (1 + star_spd);
+  let SPD = spd + star_spd;
   let lv2 = (HP/10) + ATK + SPD;
   let healExp = (ATK * healAtkTotal) + (HP * healHpTotal) + healFixedTotal;
 
