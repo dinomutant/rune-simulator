@@ -25,8 +25,8 @@ input, select { margin: 5px; }
 星座 速度[%] <input id="star_spd" type="number" value="0"><br>
 星座 クリダメ[%] <input id="star_cd" type="number" value="0"><br>
 星座 クリ率[%] <input id="star_cr" type="number" value="0"><br>
-ネストスキン[%] <input id="egg_atk" type="number" value="0"><br>
-エッグスキン[%] <input id="nest_hp" type="number" value="0"><br>
+ネストスキン[%](攻撃) <input id="egg_atk" type="number" value="0"><br>
+エッグスキン[%] (体力)<input id="nest_hp" type="number" value="0"><br>
 敵攻撃(保護膜用) <input id="enemy_atk" type="number" value="1000"><br>
 
 <h3>ルーン</h3>
@@ -1474,7 +1474,7 @@ Lv: ${lv1.toFixed(0)} → ${lv2.toFixed(0)}<br><br>
 速度: ${SPD.toFixed(1)}<br><br>
 
 クリティカルダメージ: ${atkCrit.toFixed(1)}<br>
-クリティカル発生率: ${(critRate * 100).toFixed(1)}%<br>
+クリティカル発生率: ${(critRate * 100).toFixed(2)}%<br>
 ⇒攻撃換算(クリティカル期待値込): ${critExp.toFixed(1)}<br><br>
 
 防御期待値 [/1ターン]: ${defExp.toFixed(1)}<br>
